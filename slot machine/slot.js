@@ -37,25 +37,22 @@ class SlotMachine {
 
     addEvent() {
         let x = document.querySelector(".buzzer");
+        let imageSlot = document.querySelectorAll(".a1");
+        let image = document.createElement("img");
         x.addEventListener("click", () => {
-            // let spin = setInterval(this.spinning(), 50);
+            let spin = setInterval(() => {
+                for (let i = 0; i < imageSlot.length; i++) {
+                    image.src = "";
+                    image.src = this.slots[Math.floor(Math.random() * 4)].imagesUrl;
+                    imageSlot[i].innerHTML = "";
+                    imageSlot[i].appendChild(image);
+                }
+            }, 50);
             // setTimeout(clearInterval(spin), 1000);
-            let result = this.play();
-            this.displayResult(result);
+            // let result = this.play();
+            // this.displayResult(result);
         });
     }
-
-    // spinning() {
-    //     let imageSlot = document.querySelectorAll(".a1");
-    //     let image = document.createElement("img");
-
-    //     for (let i = 0; i < imageSlot.length; i++) {
-    //         image.src = "";
-    //         image.src = this.slots[Math.floor(Math.random() * 4)].imagesUrl;
-    //         imageSlot[i].innerHTML = "";
-    //         imageSlot[i].appendChild(image);
-    //     }
-    // }
 
     displayResult(result) {
         for (let i = 0; i < result.length; i++) {

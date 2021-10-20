@@ -1,58 +1,59 @@
 html {
-  background-color: #666666;
+    background-color: #666666;
 }
 
 body {
-  margin: 6rem 0;
+    margin: 6rem 0;
 }
 
 main {
-  font-size: 2rem;
-  background-color: #666666;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: White;
-  font-weight: bold;
+    font-size: 2rem;
+    background-color: #666666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: White;
+    font-weight: bold;
 }
 
 .rectangle {
-  width: 40%;
-  background-color: #ef5350;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 0.5rem;
+    width: 40%;
+    background-color: #ef5350;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
 }
 
 .slots {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 60%;
-  margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+    margin: 20px 0;
 }
 
 .a1 {
-  height: 150px;
-  width: 100px;
-  background-color: White;
-  border-radius: 0.5rem;
+    height: 150px;
+    width: 100px;
+    background-color: White;
+    border-radius: 0.5rem;
+    margin: 0 0.5rem;
 }
 
 .a1 img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .title {
-  margin: 1rem;
-  color: White;
-  font-weight: bold;
-  text-align: center;
+    margin: 1rem;
+    color: White;
+    font-weight: bold;
+    text-align: center;
 }
 
 .buzzer {
-  cursor: pointer;
-  padding: 1rem;
+    cursor: pointer;
+    padding: 1rem;
 }
