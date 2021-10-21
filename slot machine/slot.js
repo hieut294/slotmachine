@@ -40,7 +40,6 @@ class SlotMachine {
         let imageSlot = document.querySelectorAll(".a1");
         let image = document.createElement("img");
         x.addEventListener("click", () => {
-            debugger;
             let spin = setInterval(() => {
                 for (let i = 0; i < imageSlot.length; i++) {
                     image.src = "";
