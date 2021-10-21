@@ -40,6 +40,7 @@ class SlotMachine {
         let imageSlot = document.querySelectorAll(".a1");
         let image = document.createElement("img");
         x.addEventListener("click", () => {
+            debugger;
             let spin = setInterval(() => {
                 for (let i = 0; i < imageSlot.length; i++) {
                     image.src = "";
@@ -47,7 +48,7 @@ class SlotMachine {
                     imageSlot[i].innerHTML = "";
                     imageSlot[i].appendChild(image);
                 }
-            }, 50);
+            }, 5);
             // setTimeout(clearInterval(spin), 1000);
             // let result = this.play();
             // this.displayResult(result);
