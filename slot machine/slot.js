@@ -30,17 +30,17 @@ class SlotMachine {
                 imagesUrl: "images/cherry.png",
             },
         ];
-        this.addEvent();
+        this.mainEvent();
         this.initBalance = document.querySelector(".balance");
         this.initBalance.innerHTML = "Your Balance: " + this.balance;
     }
 
-    addEvent() {
+    mainEvent() {
         let x = document.querySelector(".buzzer");
-        let imageSlot = document.querySelectorAll(".a1");
-        let image = document.createElement("img");
         x.addEventListener("click", () => {
             let spin = setInterval(() => {
+                let imageSlot = document.querySelectorAll(".a1");
+                let image = document.createElement("img");
                 for (let i = 0; i < imageSlot.length; i++) {
                     image.src = "";
                     image.src = this.slots[Math.floor(Math.random() * 4)].imagesUrl;
@@ -48,9 +48,11 @@ class SlotMachine {
                     imageSlot[i].appendChild(image);
                 }
             }, 5);
-            // setTimeout(clearInterval(spin), 1000);
-            // let result = this.play();
-            // this.displayResult(result);
+            setTimeout(() => {
+                clearInterval(spin);
+                let result = this.play();
+                this.displayResult(result);
+            }, 1000);
         });
     }
 
