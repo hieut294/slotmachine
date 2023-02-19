@@ -39,15 +39,15 @@ class SlotMachine {
         let x = document.querySelector(".buzzer");
         x.addEventListener("click", () => {
             let spin = setInterval(() => {
-                let imageSlot = document.querySelectorAll(".a1");
-                let image = document.createElement("img");
+                let imageSlot = document.querySelectorAll(".slot");
                 for (let i = 0; i < imageSlot.length; i++) {
+                    let image = document.createElement("img");
                     image.src = "";
                     image.src = this.slots[Math.floor(Math.random() * 4)].imagesUrl;
                     imageSlot[i].innerHTML = "";
                     imageSlot[i].appendChild(image);
                 }
-            }, 5);
+            }, 50);
             setTimeout(() => {
                 clearInterval(spin);
                 let result = this.play();
@@ -60,7 +60,7 @@ class SlotMachine {
         for (let i = 0; i < result.length; i++) {
             let image = document.createElement("img");
             image.src = this.slots.find(({ name }) => name === result[i]).imagesUrl;
-            let imageSlot = document.querySelectorAll(".a1");
+            let imageSlot = document.querySelectorAll(".slot");
             imageSlot[i].innerHTML = "";
             imageSlot[i].appendChild(image);
         }

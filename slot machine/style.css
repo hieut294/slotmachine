@@ -33,7 +33,7 @@ main {
     margin: 20px 0;
 }
 
-.a1 {
+.slot {
     height: 150px;
     width: 100px;
     background-color: White;
@@ -41,7 +41,7 @@ main {
     margin: 0 0.5rem;
 }
 
-.a1 img {
+.slot img {
     width: 100%;
     height: 100%;
 }
